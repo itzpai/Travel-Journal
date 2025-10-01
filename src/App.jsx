@@ -1,16 +1,25 @@
-import Header from './components/Header'
-import logo from './assets/global-icon.png'
-import Main from './components/Main'
-import image from './image/bagan.jfif'
-import icon from './assets/location-icon.png'
+import Nav from './components/Nav'
+import ContentCard from './components/ContentCard'
+import data from './data'
 
-function App() {
+export default function App() {
+  const contentCards = data.map((item) => {
+    return(
+      <ContentCard 
+        key={item.id}
+        image={item.image}  
+        name={item.name} 
+        country={item.country}            
+        location={item.location} 
+        about={item.about} 
+      />
+    )
+  })
+
   return (
        <>
-        <Header logo={logo} />
-        <Main image={image} icon={icon} />
+          <Nav />
+          {contentCards}
        </>   
   )
 }
-
-export default App
