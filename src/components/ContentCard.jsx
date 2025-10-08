@@ -4,14 +4,14 @@ import binIcon from '../assets/bin.png'
 export default function ContentCard({item, onRemove}){
 
     return(
-        <main className="main">
-            <div className="main-image-container">
+        <article className="card">
+            <div className="image-container">
                 <img src={item.image} alt={item.name} />
             </div>
-            <div className="main-content">
-                <div className="main-content-location">
+            <div className="content">
+                <div className="content-location">
                     <img src={icon} alt="location" />
-                    <h1>{item.name}</h1>
+                    <h2>{item.name}</h2>
                     <a href={item.location}>View on Google Maps</a>
                     <button 
                         className="remove-button" 
@@ -21,11 +21,11 @@ export default function ContentCard({item, onRemove}){
                         <img src={binIcon} alt="Remove" />
                     </button>
                 </div>
-                <div className="main-content-info">
+                <div className="content-info">
                     <h3>{item.country}</h3>
                     <p>{item.about}</p>
                 </div>
             </div>
-        </main>
+        </article>
     )
 }

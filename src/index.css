@@ -20,7 +20,7 @@
     text-decoration: none;
 }
 
-.main{
+.card{
     display: flex;
     align-items: stretch;
     gap: 1rem;
@@ -33,7 +33,7 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.main-image-container{
+.image-container{
     width: 125px;
     height: 160px;
     border-radius: 10px;
@@ -41,32 +41,32 @@
     flex-shrink: 0;
 }
 
-.main-image-container img{
+.image-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.main-content{
+.content{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     flex: 1;
 }
 
-.main-content-location{
+.content-location{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.3rem;
 }
 
-.main-content-location h1{
+.content-location h2{
     font-size: 1rem;
     line-height: 1.2;
 }
 
-.main-content-location a{
+.content-location a{
     margin-left: 5px;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
@@ -74,13 +74,19 @@
     text-decoration: underline;
 }
 
-.main-content-location a:hover{
+.content-location a:hover{
     color: #3609e6;
 }
 
-.main-content-location img{
+.content-location img{
     width: 20px;
     height: 20px;
+}
+
+.empty-state h2{
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* Remove button styling */
@@ -112,7 +118,7 @@
     outline-offset: 2px;
 }
 
-.main-content-info h3{
+.content-info h3{
     color: #374151;
     font-size: 1rem;
     font-weight: 700;
@@ -120,7 +126,7 @@
     text-transform: uppercase;
 }
 
-.main-content-info p{
+.content-info p{
     margin-top: 10px;
     color: #4b5563;
     line-height: 1.5;
